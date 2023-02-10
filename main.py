@@ -20,22 +20,24 @@ def worker_thread(search_key):
 
     #Release resources
     del image_scraper
-
+"018084998199","018084998144LH","018084998151","018084998045LH"
+    
+    
 if __name__ == "__main__":
     #Define file path
     webdriver_path = os.path.normpath(os.path.join(os.getcwd(), 'webdriver', webdriver_executable()))
     image_path = os.path.normpath(os.path.join(os.getcwd(), 'photos'))
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-    search_keys = list(set(["cat", "t-shirt"]))
+    search_keys = list(set(["018084998199","018084998144LH","018084998151","018084998045LH"]))
 
     #Parameters
-    number_of_images = 5                # Desired number of images
+    number_of_images = 1                # Desired number of images
     headless = True                     # True = No Chrome GUI
     min_resolution = (0, 0)             # Minimum desired image resolution
     max_resolution = (9999, 9999)       # Maximum desired image resolution
     max_missed = 1000                   # Max number of failed images before exit
-    number_of_workers = 1               # Number of "workers" used
+    number_of_workers = 3               # Number of "workers" used
     keep_filenames = False              # Keep original URL image filenames
 
     #Run each search_key in a separate thread
